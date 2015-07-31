@@ -1,0 +1,77 @@
+/* Put your css in here */
+body
+{
+ background-color: lightgray;
+  font-family: "Trebuchet MS"
+}
+#main
+{
+  margin-left: auto;
+  margin-right: auto;
+  width:700px;
+  height:800px;
+  border: 1px black;
+  background-color: white;
+  border: 2px solid black;
+}
+
+#titleBanner
+{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  width: 700px;
+  height: 110px;
+  border-bottom: 2px solid black;
+}
+#smiley
+{
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  float: left;
+}
+h1
+{
+text-align:center;
+  font-size: 48px;
+  margin-top:-2px;
+}
+#titleImg
+{
+  width: 210px;
+
+ margin-right: auto;
+  margin-left: auto;
+  display:block;
+}
+#words
+{
+  
+  padding: 70px 10px;
+  
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#words div
+{
+  display: inline-block;
+  padding: 5px
+}
+#words input
+{
+  text-align: center;
+}
+#madLib
+{
+    margin-left: auto;
+  margin-right: auto;
+  border-top: 5px solid black;
+  padding-top: 45px;
+  width: 600px;
+  font-size: 18px;
+  margin-top: 10px;
+}
