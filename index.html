@@ -23,12 +23,18 @@
             user clicks around different text boxes.
           -->
         <input type="text" ng-model="item.value" ng-click="item.origVal=item.value != ''? item.value : item.origVal;item.value = '';" ng-blur="item.value = item.value || item.origVal"\>
+
         </div>
+        <form>
+          <p>Name is:</p>
+        <input type="radio" name="Gender" ng-model="gender"  value="M" >Male</input>
+        <input type="radio" name="Gender" ng-model="gender"  value="F" checked="checked">Female</input>
+        </form>
       </div>
       <div id="madLib">
-       <p> {{mw.female_name.value}} was a {{mw.job_title.value}} who loved technology. Although she loved parts of her job, she absolutely hated  {{mw.tedious_task.value}} and {{mw.dirty_task.value}}. So, {{mw.female_name.value}} met with her life mentor {{mw.celebrity.value}} who told her to learn how to {{mw.useless_skill.value}} with Thinkful. Thinkful didn't offer a course on {{mw.useless_skill.value}} so she studied programming instead. </p>
+       <p> {{mw.name.value}} was a {{mw.job_title.value}} who loved technology. Although {{gender == 'F' ? 'she' : 'he'}} loved parts of {{gender == 'F' ? 'her' : 'his'}} job, {{gender == 'F' ? 'she' : 'he'}} absolutely hated  {{mw.tedious_task.value}} and {{mw.dirty_task.value}}. So, {{mw.name.value}} met with {{gender == 'F' ? 'her' : 'his'}} life mentor {{mw.celebrity.value}} who told {{gender == 'F' ? 'her' : 'him'}} to learn how to {{mw.useless_skill.value}} with Thinkful. Thinkful didn't offer a course on {{mw.useless_skill.value}}, so {{gender == 'F' ? 'she' : 'he'}} studied AngularJS instead. </p>
  
-<p>What a great decision! With her new skills, {{mw.female_name.value}} built a(n) {{mw.adjective.value}} robot named {{mw.obnoxiuous_celebrity.value}} that not only loved {{mw.dirty_task.value}} but did it {{mw.huge_no.value}} times faster. </p>
+<p>What a great decision! With {{gender == 'F' ? 'her' : 'his'}} new skills, {{mw.name.value}} built a(n) {{mw.adjective.value}} robot named {{mw.obnoxious_celebrity.value}} that not only loved {{mw.dirty_task.value}}, but did it {{mw.huge_no.value}} times faster. </p>
       </div>
       
     </div>
