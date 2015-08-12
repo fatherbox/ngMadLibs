@@ -63,6 +63,7 @@ text-align:center;
   width: 200px;
   height: 10px;
   margin-top: 10px;
+  padding-left: 30px;
 }
 #words div
 {
@@ -73,6 +74,11 @@ text-align:center;
 {
   font-size: 14px;
 }
+input.redBox
+{
+  border: 2px solid firebrick;
+
+}
 #words form p{
   margin-bottom: -1px;
 }
@@ -80,13 +86,31 @@ text-align:center;
 {
   text-align: center;
 }
+button
+{
+  margin-top: 100px;
+  display: block;
+  margin-left: auto;
+  width: 150px;
+  padding: 4px;
+}
 #madLib
 {
     margin-left: auto;
   margin-right: auto;
-  border-top: 5px solid black;
-  padding-top: 45px;
+
+  padding-top: 100px;
   width: 600px;
   font-size: 18px;
   margin-top: 10px;
+}
+#errMessage
+{
+  margin-top: 50px;
+
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:300px;
+  padding-left: 60px;
 }
