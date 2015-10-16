@@ -55,6 +55,10 @@ text-align:center;
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+
+  //-webkit-transition: all linear 2s;
+
+  //transition: 2s linear all;
 }
 #words form{
   display:block;
@@ -113,4 +117,69 @@ button
   margin-right:auto;
   width:300px;
   padding-left: 60px;
+}
+
+
+.animateWords, .madlibAnim
+{
+  -moz-transition:all linear .8s;
+  -o-transition:all linear .8s;
+  transition:all linear .8s;
+
+  -webkit-transition:all linear .8s;
+  transition:all linear .8s;
+  opacity:1;
+}
+.animateWords.ng-hide-add
+{
+
+  //display: block !important;
+ //position: absolute;
+opacity: 1;
+  transition: 1s linear all;
+}
+#words.ng-hide-add.ng-hide-add-active,
+.madlibAnim.ng-hide-add.ng-hide-add-active
+{
+
+ // display: none;
+  opacity: 0;
+}
+
+.animateWords.ng-hide-remove, .madlibAnim.ng-hide-remove
+{
+  opacity: 0;
+  -webkit-transition: all linear .5s;
+  display: none;
+  transition: .5s linear all;
+
+}
+
+.animateWords.ng-hide-remove
+{
+  -webkit-transition: all linear .5s;
+  position: absolute;
+  display: none;
+
+}
+.madlibAnim.ng-hide-remove{
+  -webkit-transition: all linear .5s;
+  transition: all linear .5s;
+
+}
+.madlibAnim.ng-hide-a
+dd{
+max-height: 200px;
+
+}
+.madlibAnim.ng-hide-add.ng-hide-add-active
+{
+  max-height: 0px;
+}
+.animateWords.ng-hide-remove.ng-hide-remove-active,
+.madlibAnim.ng-hide-remove.ng-hide-remove-active
+{
+  opacity: 1;
+
+  position: static;
 }

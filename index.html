@@ -7,6 +7,8 @@
     <script>document.write('<base href="' + document.location + '" />');</script>
     <link rel="stylesheet" href="style.css" />
     <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.17/angular.js" data-semver="1.3.17"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.17/angular-animate.min.js"></script>
+
     <script src="app.js"></script>
   </head>
 
@@ -15,7 +17,7 @@
       <div id="titleBanner">
         <img id="smiley" src="smiley.png" \><img id="titleImg" src="title.png" \><h1>Automate This!</h1>
       </div>
-      <div id="words" ng-show="filledIn == false">
+      <div id="words" class="animateWords"  ng-show="filledIn == false">
         <h2>Provide the following words:</h2>
 
         <div ng-repeat="item in mw">
@@ -36,7 +38,7 @@
       <h3 id="errMessage"> {{errMessage}}</h3>
 
       </div>
-      <div id="madLib" ng-show="filledIn == true">
+      <div id="madLib" class="madlibAnim" ng-show="filledIn == true">
        <p> {{mw.name.value}} was a {{mw.job_title.value}} who loved technology. Although {{gender == 'F' ? 'she' : 'he'}} loved parts of {{gender == 'F' ? 'her' : 'his'}} job, {{gender == 'F' ? 'she' : 'he'}} absolutely hated  {{mw.tedious_task.value}} and {{mw.dirty_task.value}}. So, {{mw.name.value}} met with {{gender == 'F' ? 'her' : 'his'}} life mentor {{mw.celebrity.value}} who told {{gender == 'F' ? 'her' : 'him'}} to learn how to {{mw.useless_skill.value}} with Thinkful. Thinkful didn't offer a course on {{mw.useless_skill.value}}, so {{gender == 'F' ? 'she' : 'he'}} studied AngularJS instead. </p>
  
 <p>What a great decision! With {{gender == 'F' ? 'her' : 'his'}} new skills, {{mw.name.value}} built a(n) {{mw.adjective.value}} robot named {{mw.obnoxious_celebrity.value}} that not only loved {{mw.dirty_task.value}}, but did it {{mw.huge_no.value}} times faster. </p>

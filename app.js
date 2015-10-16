@@ -1,6 +1,6 @@
-var app = angular.module('ngMadLibs', []);
+var app = angular.module('ngMadLibs', ['ngAnimate']);
 
-app.controller('MainCtrl', function($scope) {
+app.controller('MainCtrl', function($scope, $interval) {
   $scope.name = 'World';
   $scope.madlibWords = 
   {
@@ -55,13 +55,19 @@ app.controller('MainCtrl', function($scope) {
    */
   $scope.startOver = function ()
   {
-    for (var it in $scope.mw)
-    {
-      $scope.mw[it].value = $scope.mw[it].defVal;
 
-    }
     $scope.filledIn = false;
     $scope.wordsForm.$submitted = false;
+
+
+    $interval(function() {
+      for (var it in $scope.mw) {
+        $scope.mw[it].value = $scope.mw[it].defVal;
+
+      }
+    }, 1000, 0);
+
+
 
   }
 });
